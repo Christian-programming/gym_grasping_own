@@ -1,0 +1,39 @@
+real robot parameters: dv=0.01, drot=0.1, joint_vel=0.1, gripper_rot_vel=0.3, joint_acc=0.3,
+                        freq=20
+
+training with frameskip:
+
+     fun: 218.83000057402325
+ message: 'Optimization terminated successfully.'
+    nfev: 6162
+     nit: 49
+ success: True
+       x: array([2.83801620e-03, 9.36111822e-02, 1.18097406e+00, 3.29461239e+00,
+       1.04882453e+00, 3.83012964e-01, 5.73886641e+00, 7.50828653e+00])
+
+     fun: 219.123220838486
+ message: 'Optimization terminated successfully.'
+    nfev: 8949
+     nit: 72
+ success: True
+       x: array([2.83418823e-03, 9.41566009e-02, 7.26331597e+00, 3.51585399e+00,
+       1.06678573e+00, 3.82590451e+00, 4.74684988e+00, 7.63808358e+00])
+
+
+training with fixed frameskip of 4:
+
+     fun: 239.78571246484105
+ message: 'Optimization terminated successfully.'
+    nfev: 5265
+     nit: 41
+ success: True
+       x: array([3.91767936e-03, 9.66418198e-02, 7.57459391e+00, 1.56600222e+00,
+       1.70485973e+00, 8.03399652e+00, 7.37814611e+00, 4.00000000e+00])
+
+     fun: 237.156991781566
+ message: 'Optimization terminated successfully.'
+    nfev: 3750
+     nit: 28
+ success: True
+       x: array([4.19111761e-03, 9.54600452e-02, 5.79523219e+00, 2.31415622e+00,
+       1.77725733e+00, 1.15641211e+00, 7.01087585e+00, 4.00000000e+00])

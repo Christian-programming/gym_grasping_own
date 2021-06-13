@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c432f0db-0dd0-4031-a479-b2c5d92e1349" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/envs/robot_sim_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/envs/robot_sim_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/acgd_tasks/stacking_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/acgd_tasks/stacking_task.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/block/block_grasping.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/block/block_grasping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/pick_and_place/pick_n_place_task.py" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/pick_and_place/pick_n_place_task.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1tOgVcl9pr8CowFfJHWJj1UVbj3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/hiwi2/code/muzero-general" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="gym_grasping" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/miniconda3/envs/rl/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/11Semster/BA/stacking_task" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/11Semster/BA/stacking_task/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c432f0db-0dd0-4031-a479-b2c5d92e1349" name="Default Changelist" comment="" />
+      <created>1622645574443</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622645574443</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1354" y="471" width="1235" height="996" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622647070676">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1354" y="471" width="1235" height="996" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622647070676" />
+    <state x="1472" y="537" width="846" height="762" key="FileChooserDialogImpl" timestamp="1623132851954">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1476" y="562" width="846" height="762" key="FileChooserDialogImpl/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622994178439" />
+    <state x="1472" y="537" key="FileChooserDialogImpl/0.0.3840.2160@0.0.3840.2160" timestamp="1623132851954" />
+    <state width="3798" height="616" key="GridCell.Tab.0.bottom" timestamp="1622663032989">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="616" key="GridCell.Tab.0.bottom/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622663032989" />
+    <state width="3798" height="616" key="GridCell.Tab.0.center" timestamp="1622663032988">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="616" key="GridCell.Tab.0.center/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622663032988" />
+    <state width="3798" height="616" key="GridCell.Tab.0.left" timestamp="1622663032988">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="616" key="GridCell.Tab.0.left/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622663032988" />
+    <state width="3798" height="616" key="GridCell.Tab.0.right" timestamp="1622663032989">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state width="3798" height="616" key="GridCell.Tab.0.right/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622663032989" />
+    <state x="1109" y="404" key="SettingsEditor" timestamp="1622647059952">
+      <screen x="0" y="0" width="3840" height="2160" />
+    </state>
+    <state x="1109" y="404" key="SettingsEditor/0.0.3840.2160/3840.0.1920.1080@0.0.3840.2160" timestamp="1622647059952" />
+  </component>
+</project>

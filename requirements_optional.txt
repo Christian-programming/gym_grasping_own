@@ -1,0 +1,4 @@
+tqdm
+jupyter-notebook
+opencv-python
+open3d

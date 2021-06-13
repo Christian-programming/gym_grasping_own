@@ -1,0 +1,7 @@
+numpy
+matplotlib
+Pillow
+scipy
+scikit-image
+gym
+pybullet

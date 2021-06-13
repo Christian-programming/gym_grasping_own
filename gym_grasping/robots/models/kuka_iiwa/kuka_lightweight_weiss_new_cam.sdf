@@ -1,0 +1,695 @@
+<?xml version="1.0" ?>
+<!--This file contains the SDF model of a KUKA iiwa robot with a wsg50 gripper.
+    It has been produced from the varients in //third_party/robotics/models.
+    Note:  This file is temporary, and should be deleted once Bullet supports
+    importing models in SDF.  Also, this file has been specialized for Bullet,
+    because the mass of the base link has been set to 0, as needed by Bullet.
+    Note:  All of the gripper link poses have been adjusted in the z direction
+    to achieve a reasonable position of the gripper relative to the arm.
+    Note: The joint names for the KUKA have been changed to J0, J1, etc. -->
+<sdf version='1.6'>
+  <world name='default'>
+  <model name='lbr_iiwa_with_wsg50'>
+    <link name='lbr_iiwa_link_0'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.1 0 0.07 0 -0 0</pose>
+        <mass>0</mass>
+        <inertia>
+          <ixx>0.05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.06</iyy>
+          <iyz>0</iyz>
+          <izz>0.03</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_0_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/meshes/link_0.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_0_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_0.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.2 0.2 0.2 1.0</diffuse>
+          <specular>0.4 0.4 0.4 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <link name='lbr_iiwa_link_1'>
+      <pose frame=''>0 0 0.1575 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 -0.03 0.12 0 -0 0</pose>
+        <mass>0.4</mass>
+        <inertia>
+          <ixx>0.1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.09</iyy>
+          <iyz>0</iyz>
+          <izz>0.02</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_1.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_1.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.7 0.7 0.7 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J0' type='revolute'>
+      <child>lbr_iiwa_link_1</child>
+      <parent>lbr_iiwa_link_0</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.96706</lower>
+          <upper>2.96706</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='lbr_iiwa_link_2'>
+      <pose frame=''>0 0 0.36 1.5708 -0 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.0003 0.059 0.042 0 -0 0</pose>
+        <mass>0.4</mass>
+        <inertia>
+          <ixx>0.05</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.018</iyy>
+          <iyz>0</iyz>
+          <izz>0.044</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_2.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_2.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.7 0.7 0.7 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J1' type='revolute'>
+      <child>lbr_iiwa_link_2</child>
+      <parent>lbr_iiwa_link_1</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>2.0944</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='lbr_iiwa_link_3'>
+      <pose frame=''>0 -0 0.5645 0 0 0</pose>
+      <inertial>
+        <pose frame=''>0 0.03 0.13 0 -0 0</pose>
+        <mass>0.3</mass>
+        <inertia>
+          <ixx>0.08</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.075</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_3.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_3.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1.0 0.423529411765 0.0392156862745 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J2' type='revolute'>
+      <child>lbr_iiwa_link_3</child>
+      <parent>lbr_iiwa_link_2</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.96706</lower>
+          <upper>2.96706</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='lbr_iiwa_link_4'>
+      <pose frame=''>0 -0 0.78 1.5708 0 0</pose>
+      <inertial>
+        <pose frame=''>0 0.067 0.034 0 -0 0</pose>
+        <mass>0.27</mass>
+        <inertia>
+          <ixx>0.03</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.029</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_4_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_4.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_4_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_4.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.7 0.7 0.7 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J3' type='revolute'>
+      <child>lbr_iiwa_link_4</child>
+      <parent>lbr_iiwa_link_3</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>2.0944</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='lbr_iiwa_link_5'>
+      <pose frame=''>0 -0 0.9645 0 -0 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0.0001 0.021 0.076 0 -0 0</pose>
+        <mass>0.17</mass>
+        <inertia>
+          <ixx>0.02</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.018</iyy>
+          <iyz>0</iyz>
+          <izz>0.005</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_5_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_5.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_5_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_5.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.7 0.7 0.7 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J4' type='revolute'>
+      <child>lbr_iiwa_link_5</child>
+      <parent>lbr_iiwa_link_4</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.96706</lower>
+          <upper>2.96706</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='lbr_iiwa_link_6'>
+      <pose frame=''>0 0 1.18 1.5708 -0 -3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0.0006 0.0004 0 -0 0</pose>
+        <mass>0.18</mass>
+        <inertia>
+          <ixx>0.005</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0036</iyy>
+          <iyz>0</iyz>
+          <izz>0.0047</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_6_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_6.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_6_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_6.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1.0 0.423529411765 0.0392156862745 1.0</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J5' type='revolute'>
+      <child>lbr_iiwa_link_6</child>
+      <parent>lbr_iiwa_link_5</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>2.0944</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='lbr_iiwa_link_7'>
+      <pose frame=''>0 0 1.261 0 0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0.02 0 -0 0</pose>
+        <mass>0.13</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <collision name='lbr_iiwa_link_7_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_7.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='lbr_iiwa_link_7_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>meshes/link_7.obj</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.6 0.6 0.6 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+    </link>
+    <joint name='J6' type='revolute'>
+      <child>lbr_iiwa_link_7</child>
+      <parent>lbr_iiwa_link_6</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.05433</lower>
+          <upper>3.05433</upper>
+          <effort>300</effort>
+          <velocity>10</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.5</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <!-- Attach the base of the gripper to the end of the arm -->
+    <joint name='gripper_to_arm' type='continuous'>
+      <parent>lbr_iiwa_link_7</parent>
+      <child>gripper_base_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+      </axis>
+    </joint>
+
+
+
+    <link name='gripper_base_link'>
+      <pose frame=''>0 0 1.42 -0 0 0.78539816339</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.15</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.001</iyy>
+          <iyz>0</iyz>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name='gripper_base_link_visual'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <scale>1 1 1 </scale>
+              <uri>meshes_weiss/palm_collision.stl</uri>
+            </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.6 0.6 0.6 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+        <collision name='gripper_base_link_collision'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+            <mesh>
+              <scale>1 1 1 </scale>
+              <uri>meshes_weiss/palm_collision.stl</uri>
+            </mesh>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>0.6 0.6 0.6 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </collision>
+    </link>
+
+    <joint name='base_left_finger_joint' type='prismatic'>
+      <parent>gripper_base_link</parent>
+      <child>left_finger</child>
+      <pose frame=''>0 0 0.0725 0 0 0</pose>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>0.0105</lower>
+          <upper>0.05</upper>
+          <effort>20</effort>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+
+    <link name='left_finger'>
+     <contact>
+       <lateral_friction>0.8</lateral_friction>
+       <spinning_friction>.1</spinning_friction>
+     </contact>
+      <pose frame=''>0 0.0 1.42 0.0 0.0 0.78539816339</pose>
+      <inertial>
+        <pose frame=''>0 -0.0185 -0.040 -1.57 0 -1.57</pose>
+        <mass>0.0056</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <visual name='left_finger_visual'>
+        <pose frame=''>0 -0.0185 -0.040 -1.57 0 -1.57</pose>
+        <geometry>
+            <mesh>
+              <scale>1 1 1 </scale>
+              <uri>meshes_weiss/grip1_collision_long_rubber.stl</uri>
+            </mesh>
+        </geometry>
+        <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0.25 0.25 0.25 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name='left_finger_collision'>
+        <pose frame=''>0 -0.0185 -0.040 -1.57 0 -1.57</pose>
+        <geometry>
+            <mesh>
+              <scale>1 1 1 </scale>
+              <uri>meshes_weiss/grip1_collision_long_rubber.stl</uri>
+            </mesh>
+        </geometry>
+
+      </collision>
+    </link>
+    <joint name='base_right_finger_joint' type='prismatic'>
+      <parent>gripper_base_link</parent>
+      <child>right_finger</child>
+      <axis>
+        <pose frame=''>0 0 0.0725 0 0 0</pose>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>0.0085</lower>
+          <upper>0.05</upper>
+          <effort>20</effort>
+          <velocity>2.0</velocity>
+        </limit>
+        <dynamics>
+          <damping>0</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='right_finger'>
+      <contact>
+        <lateral_friction>0.8</lateral_friction>
+        <spinning_friction>.1</spinning_friction>
+      </contact>
+      <pose frame=''>0 0.0 1.42 0 0 0.78539816339</pose>
+      <inertial>
+        <pose frame=''>0 0.0185 -0.040 -1.57 0 1.57</pose>
+        <mass>0.0056</mass>
+        <inertia>
+          <ixx>0.00001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00001</iyy>
+          <iyz>0</iyz>
+          <izz>0.00001</izz>
+        </inertia>
+      </inertial>
+      <visual name='right_finger_visual'>
+        <pose frame=''>0 0.0185 -0.040 -1.57 0 1.57</pose>
+        <geometry>
+            <mesh>
+              <scale>1 1 1 </scale>
+              <uri>meshes_weiss/grip1_collision_long_rubber.stl</uri>
+            </mesh>
+        </geometry>
+        <material>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0.25 0.25 0.25 1</diffuse>
+          <specular>0.5 0.5 0.5 1</specular>
+          <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+      <collision name='right_finger_collision'>
+        <pose frame=''>0 0.0185 -0.040 -1.57 0 1.57</pose>
+        <geometry>
+            <mesh>
+              <scale>1 1 1 </scale>
+              <uri>meshes_weiss/grip1_collision_long_rubber.stl</uri>
+            </mesh>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- attach camera object to gripper-->
+
+    <joint name='camera_joint' type='fixed'>
+      <parent>gripper_base_link</parent>
+      <child>camera</child>
+    </joint>
+    <link name='camera'>
+    <contact>
+        <lateral_friction>0.8</lateral_friction>
+        <spinning_friction>.1</spinning_friction>
+      </contact>
+      <pose frame=''>-0.088 0.088 1.35 1 0 3.9269</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <mass>0.000108</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>
+      <!--
+      <visual name='camera_visual'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+            <box><size>.08 .025 0.01</size></box>
+        </geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>0.2 0.2 0.2 1.0</diffuse>
+            <specular>0.4 0.4 0.4 1</specular>
+            <emissive>0 0 0 0</emissive>
+        </material>
+      </visual>
+
+      <collision name='camera_collision'>
+        <pose frame=''>0 0 0 0 0 0</pose>
+        <geometry>
+            <box><size>.08 .025 0.01</size></box>
+        </geometry>
+      </collision>
+      -->
+    </link>
+
+
+  </model>
+</world>
+</sdf>
