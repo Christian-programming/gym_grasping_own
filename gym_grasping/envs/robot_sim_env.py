@@ -331,7 +331,12 @@ class RobotSimEnv(gym.Env):
             # print("Warning Env: robot not clear")
             self._info["clear"] = False
         self.state_vector = self._task.state_vector
-        return self._observation
+        robot_state = self._create_robot_observation()
+        # print(robot_state)
+        zeros = np.zeros(7)
+        return np.concatenate([robot_state, zeros])
+        # return  self._observation_state 
+        # return self._observation
 
     def _create_robot_observation(self):
         '''proprioceptive robot state'''
@@ -374,6 +379,7 @@ class RobotSimEnv(gym.Env):
                                  'task_state': task_state}
         else:
             self._observation = None
+        # print("get obs ", self._observation_state)
         return self._observation
 
     def _termination(self):
@@ -420,6 +426,7 @@ class RobotSimEnv(gym.Env):
         # merge in favor of env info
         info = dict(task_info, **self._info)
         # print(self._task.state_vector)
-        self.state_vector = self._task.state_vector
+        # self.state_vector = self._task.state_vector
+        obs = self._task.state_vector
         # self._info = {}
         return obs, reward, done, info
